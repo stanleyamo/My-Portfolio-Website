@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpeg" alt="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text"> 
+             <p>Software Engineer</p>
+             <h1>Hi, I'm <span>Stanley</span><br>Amo-Brown </h1>
+        </div>
+    </div>
+</div>    
+<!------about section------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/my image.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Veniam similique vitae modi praesentium optio tempora dolorem,
+                    ipsum delectus earum illo libero nobis commodi. Ab officia magnam voluptas,
+                    iure sequi natus.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX Design</span><br>Desigining web/App interface</li>
+                        <li><span>Web Development</span><br>Building responsive websites</li>
+                        <li><span>App Development</span><br>Creating mobile applications</li>
+                    </ul>
+                </div>  
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>5+</span><br>Years of Experience</li>
+                        <li><span>50+</span><br>Projects Completed</li>
+                        <li><span>100+</span><br>Clients Worked With</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Bachelor's Degree</span><br>Computer Science</li>
+                        <li><span>Master's Degree</span><br>Software Engineering</li>
+                        <li><span>PhD</span><br>Artificial Intelligence</li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>  
+
+<!------services----->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------js----->
+<script>
+
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove('active');
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active');
+        document.getElementById(tabname).classList.add('active-tab');
+    }
+</script>
+
+
+</body>
+</html>
