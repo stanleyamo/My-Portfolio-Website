@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/89fe6f345f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/89fe6f345f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
             <img src="#" alt="" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="side-menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="menu-close" onclick="closemenu()"><i class="fa-solid fa-xmark"></i></div>
             </ul>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </div>
         </nav>
         <div class="header-text"> 
              <p>Software Engineer</p>
@@ -134,6 +139,8 @@
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+        </div>
+        <div class="btn-container"></div>
             <a href="#" class="btn">See more</a>
         </div>
     </div>
@@ -164,6 +171,9 @@
             </div>
         </div>
     </div>
+      <div class="copyright">
+        <p><i class="fa-solid fa-copyright"></i>2023 My Portfolio. All rights reserved.</p>
+    </div> 
 </div>
 
 
@@ -193,6 +203,17 @@
     }
 </script>
 
+<script>
+
+    var sideMenu = document.getElementById("side-menu");
+    function openmenu() {
+        sideMenu.style.left = "0";
+    }
+    function closemenu() {
+        sideMenu.style.left = "-200px";
+    }
+
+</script>
 
 </body>
 </html>

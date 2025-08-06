@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+ 
 body{
     background: #080808;
     color:#fff;
@@ -344,4 +348,71 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/*------small screen------*/
+nav .menu-toggle{
+    display: none;
+}
+nav .menu-close{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(#); 
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }nav .menu-toggle{
+    display: block;
+    font-size: 25px;
+    }
+    nav .menu-close{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        left: -200px;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background: #ff004f;
+        padding: 50px 0;
+        z-index: 2;
+        transition: left 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    } 
+    nav ul .menu-toggle{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul .menu-close{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
 }
